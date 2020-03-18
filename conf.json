@@ -4,7 +4,7 @@
     "addr": "127.0.0.1:3306",
     "database": "spot",
     "user": "root",
-    "password": "",
+    "password": "Passw0rd6",
     "enableAutoMigrate": false
   },
   "redis": {
@@ -13,7 +13,7 @@
   },
   "kafka": {
     "brokers": [
-      "localhost:9092"
+      "kafka1:9092"
     ]
   },
   "pushServer": {
