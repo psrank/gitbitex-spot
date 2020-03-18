@@ -1,21 +1,25 @@
 version: '3.7'
 
 services:
-  db:
+  mysql1:
     image: mysql:8.0.19
+    hostname: mysql1
+    ports:
+      - "3306:3306"
     volumes:
       - ./dockervolumes/db_data:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: Passw0rd6
       MYSQL_DATABASE: spot
   redis:
     image: redis:latest
+    ports:
+      - "6379:6379"
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
   zoo1:
-    image: zookeeper:3.5.7
+    image: zookeeper:3.4.14
     hostname: zoo1
     ports:
       - "2181:2181"
