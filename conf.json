@@ -8,12 +8,12 @@
     "enableAutoMigrate": false
   },
   "redis": {
-    "addr": ":6379",
+    "addr": "gitbitext-redis:6379",
     "password": ""
   },
   "kafka": {
     "brokers": [
-      "kafka1:9092"
+      "gitbitext-kafka:9092"
     ]
   },
   "pushServer": {
